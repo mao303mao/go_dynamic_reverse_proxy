@@ -1,0 +1,43 @@
+ProxyServ: ':82'
+Confs:
+  - Name: pay
+    Target: http://127.0.0.1:80
+    Routes:
+      - Name: stripe-doba
+        Host: pay.crov.com
+        Path: '(/doba-com/callback)/(stripedoba)'
+        RePath: '{$1}/{$2}'
+        ReqHeaders:
+          - Name: Environment-Label
+            Value: trunk
+      - Name: fpay
+        Host: pay.crov.com
+        Path: '(/doba-com/callback)/(fpay)'
+        RePath: '{$1}/{$2}'
+        ReqHeaders:
+          - Name: Environment-Label
+            Value: trunk
+      - Name: payoneer
+        Host: pay.crov.com
+        Path: '(/doba-com/callback)/payoneer'
+        RePath: '{$1}/payoneer'
+        ReqHeaders:
+          - Name: Environment-Label
+            Value: trunk
+  - Name: dd_social_pay
+    Target: http://127.0.0.1:80
+    Routes:
+     - Name: stripe-doba-dd
+       Host: pay.crov.com
+       Path: '/callback/stripedoba/connect'
+       RePath: '/callback/stripedoba/connect'
+       ReqHeaders:
+          - Name: Environment-Label
+            Value: trunk
+  - Name: test
+    Target: http://127.0.0.1:9000
+    Routes:
+     - Name: test
+       Host: test.grv.com
+       Path: '^/$'
+       RePath: '/getReverseInfo'
