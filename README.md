@@ -3,8 +3,7 @@
 - 可以通过http api进行转发服务器的动态修改
 - 可以通过http api进行路由的动态设置请求头
 
-# callback_switch
-这个是已经编译好的linux应用
+# 配置说明
  - sysConf.yml配置主http接口服务
  - reverseConf.yml这是反向代理服务及路由转发配置
 
