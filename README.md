@@ -16,19 +16,19 @@
   http://127.0.0.1:8088/getReverseInfo
 - 设置指定服务名的新的转发地址
   
-  http://127.0.0.1:8088/setNewTarget/{revsName:string}?newTarget={newTargetHostPort:string}
+  http://127.0.0.1:8088/setNewTarget/{revsName:string}?newTarget={newTargetHostPort:string-urlencode}
 - 设置指定服务名的新的转发地址和1个请求头
   
-  http://127.0.0.1:8088/setFciReveser/{revsName:string}?newTarget={newTargetHostPort:string}&headerName={headerName:string}&headerValue={headerValue:string}
+  http://127.0.0.1:8088/setFciReveser/{revsName:string}?newTarget={newTargetHostPort:string-urlencode}&headerName={headerName:string-urlencode}&headerValue={headerValue:string-urlencode}
 - 设置指定服务名的新的转发地址和删除1个请求头
   
-  http://127.0.0.1:8088/setFciReveser/{revsName:string}?newTarget={newTargetHostPort:string}&headerName={headerName:string}
+  http://127.0.0.1:8088/setFciReveser/{revsName:string}?newTarget={newTargetHostPort:string-urlencode}&headerName={headerName:string-urlencode}
 - 设置指定服务名和路由的请求头
 
-  http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string}&headerValue={headerValue:string}
+  http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string-urlencode}&headerValue={headerValue:string-urlencode}
 - 设置指定服务名和路由，删除请求头
 
-  http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string}
+  http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string-urlencode}
   
 
 # maybe todo
