@@ -5,7 +5,7 @@ Confs:
     Routes:
       - Name: stripe-xxx
         Host: pay.xxx.com
-        Path: '(/doba-com/callback)/(stripedoba)'
+        Path: '(/xxx-com/callback)/(stripexxx)'
         RePath: '{$1}/{$2}'
         ReqHeaders:
           - Name: Environment-Label
@@ -28,7 +28,7 @@ Confs:
     Target: http://127.0.0.1:80
     Routes:
      - Name: stripe-xxx-dd
-       Host: pay.crov.com
+       Host: pay.xxx.com
        Path: '/callback/stripexxx/connect'
        RePath: '/callback/stripexxx/connect'
        ReqHeaders:
