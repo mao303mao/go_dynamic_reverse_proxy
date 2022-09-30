@@ -8,6 +8,7 @@
  - reverseConf.yml这是反向代理服务及路由转发配置
 
 # 编译
+`go get "github.com/kataras/iris"`
 `go build`
 
 # http api
