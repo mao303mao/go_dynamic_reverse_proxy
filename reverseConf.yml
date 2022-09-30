@@ -3,23 +3,23 @@ Confs:
   - Name: pay
     Target: http://127.0.0.1:80
     Routes:
-      - Name: stripe-doba
-        Host: pay.crov.com
+      - Name: stripe-xxx
+        Host: pay.xxx.com
         Path: '(/doba-com/callback)/(stripedoba)'
         RePath: '{$1}/{$2}'
         ReqHeaders:
           - Name: Environment-Label
             Value: trunk
       - Name: fpay
-        Host: pay.crov.com
-        Path: '(/doba-com/callback)/(fpay)'
+        Host: pay.xxx.com
+        Path: '(/xxx-com/callback)/(fpay)'
         RePath: '{$1}/{$2}'
         ReqHeaders:
           - Name: Environment-Label
             Value: trunk
       - Name: payoneer
-        Host: pay.crov.com
-        Path: '(/doba-com/callback)/payoneer'
+        Host: pay.xxx.com
+        Path: '(/xxx-com/callback)/payoneer'
         RePath: '{$1}/payoneer'
         ReqHeaders:
           - Name: Environment-Label
@@ -27,10 +27,10 @@ Confs:
   - Name: dd_social_pay
     Target: http://127.0.0.1:80
     Routes:
-     - Name: stripe-doba-dd
+     - Name: stripe-xxx-dd
        Host: pay.crov.com
-       Path: '/callback/stripedoba/connect'
-       RePath: '/callback/stripedoba/connect'
+       Path: '/callback/stripexxx/connect'
+       RePath: '/callback/stripexxx/connect'
        ReqHeaders:
           - Name: Environment-Label
             Value: trunk
