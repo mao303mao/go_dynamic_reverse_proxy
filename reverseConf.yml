@@ -10,13 +10,6 @@ Confs:
         ReqHeaders:
           - Name: Environment-Label
             Value: trunk
-      - Name: fpay
-        Host: pay.xxx.com
-        Path: '(/xxx-com/callback)/(fpay)'
-        RePath: '{$1}/{$2}'
-        ReqHeaders:
-          - Name: Environment-Label
-            Value: trunk
       - Name: payoneer
         Host: pay.xxx.com
         Path: '(/xxx-com/callback)/payoneer'
@@ -30,14 +23,7 @@ Confs:
      - Name: stripe-xxx-dd
        Host: pay.xxx.com
        Path: '/callback/stripexxx/connect'
-       RePath: '/callback/stripexxx/connect'
+       RePath: '/callback/connect'
        ReqHeaders:
           - Name: Environment-Label
             Value: trunk
-  - Name: test
-    Target: http://127.0.0.1:9000
-    Routes:
-     - Name: test
-       Host: test.grv.com
-       Path: '^/$'
-       RePath: '/getReverseInfo'
