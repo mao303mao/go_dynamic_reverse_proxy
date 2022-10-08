@@ -9,10 +9,9 @@
    repath中{$1}、{$2}...标识path正则匹配中的子匹配1、子匹配2...
 
 # 编译
-`cmd
-go get "github.com/kataras/iris"
-go get "gopkg.in/yaml.v3"
-`
+`go get "github.com/kataras/iris"`
+
+`go get "gopkg.in/yaml.v3"`
 
 `go build`
 
