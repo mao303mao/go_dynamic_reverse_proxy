@@ -5,7 +5,7 @@
 
 # 配置说明
  - sysConf.yml配置主http接口服务，比如http api的服务端口,比如8088
- - reverseConf.yml这是反向代理服务的端口及路由转发配置,比如82
+ - reverseConf.yml这是反向代理服务的端口及路由转发配置,比如82。
    repath中{$1}、{$2}...标识path正则匹配中的子匹配1、子匹配2...
 
 # 编译
