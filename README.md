@@ -9,7 +9,11 @@
    repath中{$1}、{$2}...标识path正则匹配中的子匹配1、子匹配2...
 
 # 编译
-`go get "github.com/kataras/iris"`
+`
+go get "github.com/kataras/iris"
+go get "gopkg.in/yaml.v3"
+`
+
 `go build`
 
 # 动态修改转发及设置请求头相关的http api
