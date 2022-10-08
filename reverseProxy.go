@@ -24,13 +24,13 @@ type ReqHeader struct {
 type Route struct {
 	Name       string       `yaml:"Name"`
 	Host       string       `yaml:"Host"`
-	Path       string       `yaml:"Path"`
+	Pattern    string       `yaml:"Pattern"`
 	RePath     string       `yaml:"RePath"`
 	ReqHeaders []*ReqHeader `yaml:"ReqHeaders"`
 }
 
 func (this *Route) IsRouteEmpty() bool {
-	if strings.TrimSpace(this.Path) == "" || strings.TrimSpace(this.RePath) == "" {
+	if strings.TrimSpace(this.Pattern) == "" || strings.TrimSpace(this.RePath) == "" {
 		return true
 	}
 	return false
@@ -140,7 +140,7 @@ func ProxyRequestHandler2(proxy *httputil.ReverseProxy) func(http.ResponseWriter
 					log.Printf("[reverseConf.yml]中有[conf:%s]有[route]为空, 请检查。\n", sr.Name)
 					continue
 				}
-				rexp, err := regexp.Compile(rt.Path)
+				rexp, err := regexp.Compile(rt.Pattern)
 				if err != nil {
 					continue
 				}
@@ -206,14 +206,10 @@ func RunReverseProxyServ() {
 		log.Fatalln(err)
 	}
 	if RvConf.IsReverseConfEmpty() {
-
 		log.Panicln("[reverseConf.yml]有误, 请检查。")
 		return
 	}
-	rp, _ := NewReverseProxy("http://127.0.0.1:80")
-	if err != nil {
-		log.Printf("启动反向代理异常[http://127.0.0.1:80]：%s", err.Error())
-	}
+	rp, _ := NewReverseProxy("http://127.0.0.1:80") //此处选用一个默认80端口做一个初始化而已，无任何特殊作用
 	http.HandleFunc("/", ProxyRequestHandler2(rp))
 	server := &http.Server{Addr: RvConf.ProxyServ, Handler: nil}
 	log.Fatal(server.ListenAndServe())
