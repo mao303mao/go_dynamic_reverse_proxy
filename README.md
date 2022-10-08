@@ -4,14 +4,14 @@
 - 可以通过http api进行路由的动态设置请求头
 
 # 配置说明
- - sysConf.yml配置主http接口服务
- - reverseConf.yml这是反向代理服务及路由转发配置
+ - sysConf.yml配置主http接口服务，比如http api的服务端口（比如8088）
+ - reverseConf.yml这是反向代理服务的端口及路由转发配置
 
 # 编译
 `go get "github.com/kataras/iris"`
 `go build`
 
-# http api
+# 动态修改转发及设置请求头相关的http api
 - 查看当前的转发配置
 
   http://127.0.0.1:8088/getReverseInfo
@@ -30,6 +30,10 @@
 - 设置指定服务名和路由，删除请求头
 
   http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string-urlencode}
+  
+- 举例（get请求，修改dd_social_pay的新转发地址为http://10.110.2.254:80，设置请求头Environment-Label为silk_test_4）：
+  
+  http://192.168.52.56:8088/setFciReveser/dd_social_pay?newTarget=http://10.110.2.254:80&headerName=Environment-Label&headerValue=silk_test_4
   
 
 # maybe todo
