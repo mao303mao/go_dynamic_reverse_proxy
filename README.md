@@ -32,9 +32,9 @@
 
   http://127.0.0.1:8088/setNewHeader/{revsName:string}/{routeName:string}?headerName={headerName:string-urlencode}
   
-- 举例（get请求，修改dd_social_pay的新转发地址为http://10.110.2.254:80，设置请求头Environment-Label为silk_test_4）：
+- 举例（服务器ip为192.168.52.56），get请求，修改dd_social_pay的新转发地址为http://10.110.2.254:80 设置请求头Environment-Label为test_4：
   
-  http://192.168.52.56:8088/setFciReveser/dd_social_pay?newTarget=http://10.110.2.254:80&headerName=Environment-Label&headerValue=silk_test_4
+  http://192.168.52.56:8088/setFciReveser/dd_social_pay?newTarget=http://10.110.2.254:80&headerName=Environment-Label&headerValue=test_4
   
 
 # maybe todo
