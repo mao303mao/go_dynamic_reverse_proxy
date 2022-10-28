@@ -5,14 +5,14 @@ Confs:
     Routes:
       - Name: stripe-xxx
         Host: pay.xxx.com
-        Pattern: '(/xxx-com/callback)/(stripexxx)'
+        PathPattern: '(/xxx-com/callback)/(stripexxx)'
         RePath: '{$1}/{$2}'
         ReqHeaders:
           - Name: Environment-Label
             Value: trunk
       - Name: payoneer
         Host: pay.xxx.com
-        Pattern: '(/xxx-com/callback)/payoneer'
+        PathPattern: '(/xxx-com/callback)/payoneer'
         RePath: '{$1}/payoneer'
         ReqHeaders:
           - Name: Environment-Label
@@ -22,7 +22,7 @@ Confs:
     Routes:
      - Name: stripe-xxx-dd
        Host: pay.xxx.com
-       Pattern: '/callback/stripexxx/connect'
+       PathPattern: '/callback/stripexxx/connect'
        RePath: '/callback/connect'
        ReqHeaders:
           - Name: Environment-Label

@@ -212,7 +212,6 @@ func main() {
 		app.Shutdown(ctx)
 	})
 	app.Configure(iris.WithConfiguration(appConfig))
-
 	// 启动反向代理服务
 	go RunReverseProxyServ()
 	app.Run(iris.Addr("0.0.0.0:" + serverPort))
