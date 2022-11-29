@@ -128,26 +128,37 @@ func NewReverseProxy(defaultTarget string) (*httputil.ReverseProxy, error) {
 	return rp, nil
 }
 
-// 查找赋值锁
-var findlock sync.Mutex
+// 目标路由结构，由于存放路由查找结果
+type TargetRoute struct {
+	TargetUrl string
+	NewPath   string
+	RouteConf *Route
+	sync.Mutex
+}
+
+func (this *TargetRoute) Init() {
+	this.TargetUrl = ""
+	this.NewPath = ""
+	this.RouteConf = nil
+}
+
+var tRoute = &TargetRoute{}
 
 // 分治找route
-func FindRoute(wg *sync.WaitGroup, tRoute *TargetRoute, sr *SigleReverse, sourcePath string) {
+func FindRoute(wg *sync.WaitGroup, sr *SigleReverse, sourcePath string) {
 	defer func() {
+		wg.Done()
 		if err := recover(); err != nil {
 			log.Println(err)
-			wg.Done()
 		}
 	}()
 	if sr.IsSigleReverseEmpty() {
 		log.Printf("[reverseConf.yml]中有[conf]为空, 请检查。")
-		wg.Done()
 		return
 	}
 	if len(sr.Routes) > 0 {
 		for _, rt := range sr.Routes {
 			if tRoute.TargetUrl != "" { // 已经找到，中止
-				wg.Done()
 				return
 			}
 			if rt.IsRouteEmpty() { // 当前route配额为空
@@ -163,8 +174,8 @@ func FindRoute(wg *sync.WaitGroup, tRoute *TargetRoute, sr *SigleReverse, source
 			if len(matches) == 0 {
 				continue
 			}
-			findlock.Lock() // 匹配后，读写双锁，并结束查找
-			defer findlock.Unlock()
+			tRoute.Lock() // 匹配后，读写双锁，并结束查找
+			defer tRoute.Unlock()
 			if strings.TrimSpace(tRoute.TargetUrl) == "" {
 				newPath := rt.RePath
 				for i, m := range matches {
@@ -177,31 +188,23 @@ func FindRoute(wg *sync.WaitGroup, tRoute *TargetRoute, sr *SigleReverse, source
 				tRoute.NewPath = newPath     // 设置新的路径
 				tRoute.RouteConf = rt        // 设置对应的路由配置
 			}
-			wg.Done()
 			return
 		}
 	}
-	wg.Done()
-}
-
-// 目标路由结构，由于存放路由查找结果
-type TargetRoute struct {
-	TargetUrl string
-	NewPath   string
-	RouteConf *Route
 }
 
 // 支持正则路由版本--多协程查找route
 func ProxyRequestHandler(proxy *httputil.ReverseProxy) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var wg sync.WaitGroup
-		tRoute := &TargetRoute{}
+		// 进行锁定保护
+		tRoute.Init()
 		for _, sr := range RvConf.Confs {
-			go FindRoute(&wg, tRoute, sr, r.URL.Path)
+			go FindRoute(&wg, sr, r.URL.Path)
 			wg.Add(1)
 		}
 		wg.Wait()
-		//fmt.Println(11111, tRoute.TargetUrl, tRoute.NewPath)
+		fmt.Printf("tRoute: %v\n", tRoute)
 		if strings.TrimSpace(tRoute.TargetUrl) != "" { // 再次检查下匹配的转发route
 			proxy.Director = func(req *http.Request) {
 				target, err := url.Parse(strings.TrimSpace(tRoute.TargetUrl))
