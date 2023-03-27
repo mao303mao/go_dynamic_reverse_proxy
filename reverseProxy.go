@@ -193,9 +193,18 @@ func FindRoute(wg *sync.WaitGroup, sr *SigleReverse, sourcePath string) {
 	}
 }
 
-// 支持正则路由版本--多协程查找route
-func ProxyRequestHandler(proxy *httputil.ReverseProxy) func(http.ResponseWriter, *http.Request) {
-	return func(w http.ResponseWriter, r *http.Request) {
+// 运行反向代理
+func RunReverseProxyServ() {
+	err := InitReverseConf("reverseConf.yml")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	if RvConf.IsReverseConfEmpty() {
+		log.Panicln("[reverseConf.yml]有误, 请检查。")
+		return
+	}
+	rp, _ := NewReverseProxy("http://127.0.0.1:80")                     //此处选用一个默认80端口做一个初始化而已，无任何特殊作用
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { // 支持正则路由版本--多协程查找route
 		var wg sync.WaitGroup
 		// 进行锁定保护
 		tRoute.Init()
@@ -204,13 +213,14 @@ func ProxyRequestHandler(proxy *httputil.ReverseProxy) func(http.ResponseWriter,
 			wg.Add(1)
 		}
 		wg.Wait()
-		fmt.Printf("tRoute: %v\n", tRoute)
+		// fmt.Printf("tRoute: %v\n", tRoute)
 		if strings.TrimSpace(tRoute.TargetUrl) != "" { // 再次检查下匹配的转发route
-			proxy.Director = func(req *http.Request) {
+			rp.Director = func(req *http.Request) {
 				target, err := url.Parse(strings.TrimSpace(tRoute.TargetUrl))
 				if err != nil {
 					log.Printf("转发的URL有误：%s", tRoute.TargetUrl)
 				}
+				// log.Printf("转发的URL：%s", tRoute.TargetUrl)
 				targetQuery := target.RawQuery
 				req.URL.Scheme = target.Scheme
 				req.URL.Host = target.Host
@@ -237,26 +247,11 @@ func ProxyRequestHandler(proxy *httputil.ReverseProxy) func(http.ResponseWriter,
 					req.Host = tRoute.RouteConf.Host
 				}
 				req.URL.Path = tRoute.NewPath
-				log.Printf("url:%s, host:%s, xff:%s\n", req.URL.String(), req.Host, req.Header.Get("X-Forwarded-For"))
+				log.Printf("url:%s, host:%s, X-Forwarded-For:%s\n", req.URL.String(), req.Host, req.Header.Get("X-Forwarded-For"))
 			}
 		}
-		proxy.ServeHTTP(w, r)
-
-	}
-}
-
-// 运行反向代理
-func RunReverseProxyServ() {
-	err := InitReverseConf("reverseConf.yml")
-	if err != nil {
-		log.Fatalln(err)
-	}
-	if RvConf.IsReverseConfEmpty() {
-		log.Panicln("[reverseConf.yml]有误, 请检查。")
-		return
-	}
-	rp, _ := NewReverseProxy("http://127.0.0.1:80") //此处选用一个默认80端口做一个初始化而已，无任何特殊作用
-	http.HandleFunc("/", ProxyRequestHandler(rp))
+		rp.ServeHTTP(w, r)
+	})
 	server := &http.Server{Addr: RvConf.ProxyServ, Handler: nil}
 	log.Fatal(server.ListenAndServe())
 }

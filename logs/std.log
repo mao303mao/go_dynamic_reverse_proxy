@@ -1,0 +1,990 @@
+2023/03/27 13:53:02 reverseProxy.go:276: 转发的URL：http://127.0.0.1:80
+2023/03/27 13:53:02 reverseProxy.go:303: url:http://127.0.0.1:80/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 13:53:02 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:02 server.go:3197: http: panic serving 127.0.0.1:58936: runtime error: invalid memory address or nil pointer dereference
+goroutine 41 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003982a0}, 0xc000320100)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003982a0}, 0xc000320100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0003982a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003982a0}, 0xc000320100)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001de1b0?}, {0xaa2968, 0xc0003982a0}, 0xc000320100)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000386000, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:02 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:02 server.go:3197: http: panic serving 127.0.0.1:58937: runtime error: invalid memory address or nil pointer dereference
+goroutine 42 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2700)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003160e0}, 0xc0003a2100)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003160e0}, 0xc0003a2100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0003160e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003160e0}, 0xc0003a2100)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001de420?}, {0xaa2968, 0xc0003160e0}, 0xc0003a2100)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003860a0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:02 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:02 server.go:3197: http: panic serving 127.0.0.1:58939: runtime error: invalid memory address or nil pointer dereference
+goroutine 48 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2000}, 0xc0003a2800)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2000}, 0xc0003a2800)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0002f2000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2000}, 0xc0003a2800)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001deb40?}, {0xaa2968, 0xc0002f2000}, 0xc0003a2800)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000386780, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:21 reverseProxy.go:276: 转发的URL：http://127.0.0.1:80
+2023/03/27 13:53:21 reverseProxy.go:303: url:http://127.0.0.1:80/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 13:53:21 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:21 server.go:3197: http: panic serving 127.0.0.1:58948: runtime error: invalid memory address or nil pointer dereference
+goroutine 49 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2b00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000398380}, 0xc0004bc200)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000398380}, 0xc0004bc200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc000398380?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000398380}, 0xc0004bc200)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001dec00?}, {0xaa2968, 0xc000398380}, 0xc0004bc200)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000386820, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:21 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:21 server.go:3197: http: panic serving 127.0.0.1:58949: runtime error: invalid memory address or nil pointer dereference
+goroutine 82 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2c00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003161c0}, 0xc0003a2a00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003161c0}, 0xc0003a2a00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0003161c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003161c0}, 0xc0003a2a00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001decf0?}, {0xaa2968, 0xc0003161c0}, 0xc0003a2a00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003868c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:21 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:21 server.go:3197: http: panic serving 127.0.0.1:58951: runtime error: invalid memory address or nil pointer dereference
+goroutine 15 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0002fe100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014c000}, 0xc0002fe000)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014c000}, 0xc0002fe000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014c000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014c000}, 0xc0002fe000)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000fe7e0?}, {0xaa2968, 0xc00014c000}, 0xc0002fe000)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ac000, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:24 reverseProxy.go:276: 转发的URL：http://127.0.0.1:80
+2023/03/27 13:53:24 reverseProxy.go:303: url:http://127.0.0.1:80/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 13:53:24 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:24 server.go:3197: http: panic serving 127.0.0.1:58953: runtime error: invalid memory address or nil pointer dereference
+goroutine 101 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a3000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014c0e0}, 0xc0003a2f00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014c0e0}, 0xc0003a2f00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014c0e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014c0e0}, 0xc0003a2f00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000ffad0?}, {0xaa2968, 0xc00014c0e0}, 0xc0003a2f00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ac8c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:24 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:24 server.go:3197: http: panic serving 127.0.0.1:58954: runtime error: invalid memory address or nil pointer dereference
+goroutine 102 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a3100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000316540}, 0xc0002fe300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000316540}, 0xc0002fe300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc000316540?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000316540}, 0xc0002fe300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000ffb90?}, {0xaa2968, 0xc000316540}, 0xc0002fe300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004aca00, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:24 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:24 server.go:3197: http: panic serving 127.0.0.1:58956: runtime error: invalid memory address or nil pointer dereference
+goroutine 117 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0002fe500)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014c1c0}, 0xc0002fe400)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014c1c0}, 0xc0002fe400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc00014c1c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014c1c0}, 0xc0002fe400)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0000ffda0?}, {0xaa2968, 0xc00014c1c0}, 0xc0002fe400)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000387ae0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:33 reverseProxy.go:276: 转发的URL：http://127.0.0.1:80
+2023/03/27 13:53:33 reverseProxy.go:303: url:http://127.0.0.1:80/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 13:53:33 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:33 server.go:3197: http: panic serving 127.0.0.1:58957: runtime error: invalid memory address or nil pointer dereference
+goroutine 118 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0002fe800)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000316620}, 0xc000320500)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000316620}, 0xc000320500)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc000316620?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000316620}, 0xc000320500)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001941e0?}, {0xaa2968, 0xc000316620}, 0xc000320500)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000387b80, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:33 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:33 server.go:3197: http: panic serving 127.0.0.1:58958: runtime error: invalid memory address or nil pointer dereference
+goroutine 110 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014c2a0}, 0xc0002fe700)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014c2a0}, 0xc0002fe700)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014c2a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014c2a0}, 0xc0002fe700)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001942a0?}, {0xaa2968, 0xc00014c2a0}, 0xc0002fe700)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ad680, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:33 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:33 server.go:3197: http: panic serving 127.0.0.1:58960: runtime error: invalid memory address or nil pointer dereference
+goroutine 79 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a3200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000316700}, 0xc0004bc400)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000316700}, 0xc0004bc400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc000316700?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000316700}, 0xc0004bc400)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4cf0?}, {0xaa2968, 0xc000316700}, 0xc0004bc400)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bba40, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:40 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:40 server.go:3197: http: panic serving 127.0.0.1:58963: runtime error: invalid memory address or nil pointer dereference
+goroutine 80 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000316000}, 0xc0004bcb00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000316000}, 0xc0004bcb00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc000316000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000316000}, 0xc0004bcb00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4db0?}, {0xaa2968, 0xc000316000}, 0xc0004bcb00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bbb80, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:40 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:40 server.go:3197: http: panic serving 127.0.0.1:58964: runtime error: invalid memory address or nil pointer dereference
+goroutine 81 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003980e0}, 0xc0004bcd00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003980e0}, 0xc0004bcd00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0003980e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003980e0}, 0xc0004bcd00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4e70?}, {0xaa2968, 0xc0003980e0}, 0xc0004bcd00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bbcc0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:40 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:40 server.go:3197: http: panic serving 127.0.0.1:58965: runtime error: invalid memory address or nil pointer dereference
+goroutine 149 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320500)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003982a0}, 0xc000320300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003982a0}, 0xc000320300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0003982a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003982a0}, 0xc000320300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003004b0?}, {0xaa2968, 0xc0003982a0}, 0xc000320300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dc780, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:41 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:41 server.go:3197: http: panic serving 127.0.0.1:58966: runtime error: invalid memory address or nil pointer dereference
+goroutine 154 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2000}, 0xc000320600)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2000}, 0xc000320600)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0002f2000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2000}, 0xc000320600)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003008a0?}, {0xaa2968, 0xc0002f2000}, 0xc000320600)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dd040, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:41 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:41 server.go:3197: http: panic serving 127.0.0.1:58967: runtime error: invalid memory address or nil pointer dereference
+goroutine 155 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320800)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000398460}, 0xc000320700)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000398460}, 0xc000320700)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc000398460?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000398460}, 0xc000320700)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000300960?}, {0xaa2968, 0xc000398460}, 0xc000320700)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dd180, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:41 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:41 server.go:3197: http: panic serving 127.0.0.1:58968: runtime error: invalid memory address or nil pointer dereference
+goroutine 166 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f21c0}, 0xc0004bc100)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f21c0}, 0xc0004bc100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f21c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f21c0}, 0xc0004bc100)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4510?}, {0xaa2968, 0xc0002f21c0}, 0xc0004bc100)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001ba820, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:46 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:46 server.go:3197: http: panic serving 127.0.0.1:58969: runtime error: invalid memory address or nil pointer dereference
+goroutine 160 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320a00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000398540}, 0xc000320900)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000398540}, 0xc000320900)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc000398540?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000398540}, 0xc000320900)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000300de0?}, {0xaa2968, 0xc000398540}, 0xc000320900)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dda40, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:46 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:46 server.go:3197: http: panic serving 127.0.0.1:58970: runtime error: invalid memory address or nil pointer dereference
+goroutine 171 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2380}, 0xc0004bc300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2380}, 0xc0004bc300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0002f2380?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2380}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4900?}, {0xaa2968, 0xc0002f2380}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bb680, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:53:46 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:53:46 server.go:3197: http: panic serving 127.0.0.1:58971: runtime error: invalid memory address or nil pointer dereference
+goroutine 181 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320c00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000398620}, 0xc000320b00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000398620}, 0xc000320b00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc000398620?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000398620}, 0xc000320b00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0003011a0?}, {0xaa2968, 0xc000398620}, 0xc000320b00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002ddf40, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:54:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:54:16 server.go:3197: http: panic serving 127.0.0.1:58975: runtime error: invalid memory address or nil pointer dereference
+goroutine 186 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320e00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc000398700}, 0xc000320d00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc000398700}, 0xc000320d00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc000398700?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc000398700}, 0xc000320d00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000301560?}, {0xaa2968, 0xc000398700}, 0xc000320d00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003863c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:54:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:54:16 server.go:3197: http: panic serving 127.0.0.1:58976: runtime error: invalid memory address or nil pointer dereference
+goroutine 176 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000320f00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003987e0}, 0xc0004bce00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003987e0}, 0xc0004bce00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0003987e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003987e0}, 0xc0004bce00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f4f00?}, {0xaa2968, 0xc0003987e0}, 0xc0004bce00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ac140, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:54:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:54:16 server.go:3197: http: panic serving 127.0.0.1:58977: runtime error: invalid memory address or nil pointer dereference
+goroutine 195 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000321100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003988c0}, 0xc000321000)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003988c0}, 0xc000321000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0003988c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003988c0}, 0xc000321000)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000301c50?}, {0xaa2968, 0xc0003988c0}, 0xc000321000)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000386be0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:55:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:55:16 server.go:3197: http: panic serving 127.0.0.1:59006: runtime error: invalid memory address or nil pointer dereference
+goroutine 200 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bcf00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2540}, 0xc000321200)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2540}, 0xc000321200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f2540?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2540}, 0xc000321200)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000194090?}, {0xaa2968, 0xc0002f2540}, 0xc000321200)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003870e0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:55:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:55:16 server.go:3197: http: panic serving 127.0.0.1:59007: runtime error: invalid memory address or nil pointer dereference
+goroutine 201 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bd000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f27e0}, 0xc000321300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f27e0}, 0xc000321300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0002f27e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f27e0}, 0xc000321300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001941e0?}, {0xaa2968, 0xc0002f27e0}, 0xc000321300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc000387180, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 13:55:16 reverseProxy.go:276: 转发的URL：
+2023/03/27 13:55:16 server.go:3197: http: panic serving 127.0.0.1:59008: runtime error: invalid memory address or nil pointer dereference
+goroutine 217 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc000321400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0003989a0}, 0xc0004bd100)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0003989a0}, 0xc0004bd100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081ad8?, {0xaa2968?, 0xc0003989a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0003989a0}, 0xc0004bd100)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f55f0?}, {0xaa2968, 0xc0003989a0}, 0xc0004bd100)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ad2c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:01:57 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:01:57 server.go:3197: http: panic serving 127.0.0.1:59118: runtime error: invalid memory address or nil pointer dereference
+goroutine 135 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2000}, 0xc00008c000)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2000}, 0xc00008c000)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f2000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2000}, 0xc00008c000)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011c120?}, {0xaa2968, 0xc0002f2000}, 0xc00008c000)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc00005a1e0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:01:57 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:01:57 server.go:3197: http: panic serving 127.0.0.1:59119: runtime error: invalid memory address or nil pointer dereference
+goroutine 128 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2100)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f21c0}, 0xc0004bc300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f21c0}, 0xc0004bc300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290819e8?, {0xaa2968?, 0xc0002f21c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f21c0}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000194570?}, {0xaa2968, 0xc0002f21c0}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003860a0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:01:57 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:01:57 server.go:3197: http: panic serving 127.0.0.1:59120: runtime error: invalid memory address or nil pointer dereference
+goroutine 143 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2380}, 0xc00008c200)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2380}, 0xc00008c200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290819e8?, {0xaa2968?, 0xc0002f2380?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2380}, 0xc00008c200)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011c6f0?}, {0xaa2968, 0xc0002f2380}, 0xc00008c200)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001ba320, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:11 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:11 server.go:3197: http: panic serving 127.0.0.1:59121: runtime error: invalid memory address or nil pointer dereference
+goroutine 208 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c500)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a000}, 0xc0003a2200)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a000}, 0xc0003a2200)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290819e8?, {0xaa2968?, 0xc00014a000?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a000}, 0xc0003a2200)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f44b0?}, {0xaa2968, 0xc00014a000}, 0xc0003a2200)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0004ac640, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:11 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:11 server.go:3197: http: panic serving 127.0.0.1:59122: runtime error: invalid memory address or nil pointer dereference
+goroutine 228 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bc400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f27e0}, 0xc00008c400)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f27e0}, 0xc00008c400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f27e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f27e0}, 0xc00008c400)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011cab0?}, {0xaa2968, 0xc0002f27e0}, 0xc00008c400)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001babe0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:11 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:11 server.go:3197: http: panic serving 127.0.0.1:59123: runtime error: invalid memory address or nil pointer dereference
+goroutine 258 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2600)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a0e0}, 0xc0004bcb00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a0e0}, 0xc0004bcb00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014a0e0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a0e0}, 0xc0004bcb00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc000194810?}, {0xaa2968, 0xc00014a0e0}, 0xc0004bcb00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003863c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:12 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:12 server.go:3197: http: panic serving 127.0.0.1:59124: runtime error: invalid memory address or nil pointer dereference
+goroutine 233 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2700)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a2a0}, 0xc00008c700)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a2a0}, 0xc00008c700)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014a2a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a2a0}, 0xc00008c700)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011ce70?}, {0xaa2968, 0xc00014a2a0}, 0xc00008c700)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bba40, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:12 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:12 server.go:3197: http: panic serving 127.0.0.1:59125: runtime error: invalid memory address or nil pointer dereference
+goroutine 234 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c900)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f28c0}, 0xc00008c800)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f28c0}, 0xc00008c800)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290819e8?, {0xaa2968?, 0xc0002f28c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f28c0}, 0xc00008c800)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011cf30?}, {0xaa2968, 0xc0002f28c0}, 0xc00008c800)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bbb80, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:12 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:02:12 server.go:3197: http: panic serving 127.0.0.1:59126: runtime error: invalid memory address or nil pointer dereference
+goroutine 239 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008cb00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f29a0}, 0xc00008ca00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f29a0}, 0xc00008ca00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290819e8?, {0xaa2968?, 0xc0002f29a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f29a0}, 0xc00008ca00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d2f0?}, {0xaa2968, 0xc0002f29a0}, 0xc00008ca00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dc3c0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:02:31 reverseProxy.go:276: 转发的URL：http://192.168.2.36:8080
+2023/03/27 14:02:31 reverseProxy.go:303: url:http://192.168.2.36:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:02:31 reverseproxy.go:491: http: proxy error: context canceled
+2023/03/27 14:02:31 reverseProxy.go:276: 转发的URL：http://192.168.2.36:8080
+2023/03/27 14:02:31 reverseProxy.go:303: url:http://192.168.2.36:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:02:32 reverseproxy.go:491: http: proxy error: dial tcp 192.168.2.36:8080: connectex: No connection could be made because the target machine actively refused it.
+2023/03/27 14:02:41 reverseProxy.go:276: 转发的URL：http://192.168.2.36:8080
+2023/03/27 14:02:41 reverseProxy.go:303: url:http://192.168.2.36:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:02:42 reverseproxy.go:491: http: proxy error: dial tcp 192.168.2.36:8080: connectex: No connection could be made because the target machine actively refused it.
+2023/03/27 14:03:03 reverseProxy.go:276: 转发的URL：http://192.168.16.67:8080
+2023/03/27 14:03:03 reverseProxy.go:303: url:http://192.168.16.67:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:03:05 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:03:05 server.go:3197: http: panic serving 127.0.0.1:59129: runtime error: invalid memory address or nil pointer dereference
+goroutine 276 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c400)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a1c0}, 0xc0003a2600)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a1c0}, 0xc0003a2600)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc00014a1c0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a1c0}, 0xc0003a2600)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d6b0?}, {0xaa2968, 0xc00014a1c0}, 0xc0003a2600)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dcc80, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:03:05 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:03:05 server.go:3197: http: panic serving 127.0.0.1:59131: runtime error: invalid memory address or nil pointer dereference
+goroutine 259 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0004bcd00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a2a0}, 0xc0004bc300)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a2a0}, 0xc0004bc300)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290818f8?, {0xaa2968?, 0xc00014a2a0?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a2a0}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0001943c0?}, {0xaa2968, 0xc00014a2a0}, 0xc0004bc300)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0003860a0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:03:05 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:03:05 server.go:3197: http: panic serving 127.0.0.1:59141: runtime error: invalid memory address or nil pointer dereference
+goroutine 299 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc00008c600)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a460}, 0xc00008c500)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a460}, 0xc00008c500)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290818f8?, {0xaa2968?, 0xc00014a460?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a460}, 0xc00008c500)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011cc30?}, {0xaa2968, 0xc00014a460}, 0xc00008c500)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dd180, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:03:54 reverseProxy.go:276: 转发的URL：https://192.168.16.67:8080
+2023/03/27 14:03:54 reverseProxy.go:303: url:https://192.168.16.67:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:03:54 reverseproxy.go:491: http: proxy error: tls: first record does not look like a TLS handshake
+2023/03/27 14:04:09 reverseProxy.go:276: 转发的URL：http://192.168.16.67:8080
+2023/03/27 14:04:09 reverseProxy.go:303: url:http://192.168.16.67:8080/xxx-com/callback/payoneer, host:pay.xxx.com, xff:127.0.0.1
+2023/03/27 14:04:09 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:04:09 server.go:3197: http: panic serving 127.0.0.1:59147: runtime error: invalid memory address or nil pointer dereference
+goroutine 304 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2b00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc00014a620}, 0xc0003a2a00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc00014a620}, 0xc0003a2a00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x290818f8?, {0xaa2968?, 0xc00014a620?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc00014a620}, 0xc0003a2a00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011cff0?}, {0xaa2968, 0xc00014a620}, 0xc0003a2a00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002dda40, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:04:09 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:04:09 server.go:3197: http: panic serving 127.0.0.1:59148: runtime error: invalid memory address or nil pointer dereference
+goroutine 305 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2c00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2380}, 0xc00008c800)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2380}, 0xc00008c800)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f2380?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2380}, 0xc00008c800)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc00011d0b0?}, {0xaa2968, 0xc0002f2380}, 0xc00008c800)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0002ddb80, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
+2023/03/27 14:04:09 reverseProxy.go:276: 转发的URL：
+2023/03/27 14:04:09 server.go:3197: http: panic serving 127.0.0.1:59163: runtime error: invalid memory address or nil pointer dereference
+goroutine 325 [running]:
+net/http.(*conn).serve.func1()
+	D:/Go/src/net/http/server.go:1825 +0xbf
+panic({0x91f260, 0xdcd340})
+	D:/Go/src/runtime/panic.go:844 +0x258
+main.RunReverseProxyServ.func1.1(0xc0003a2e00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:296 +0x4f1
+net/http/httputil.(*ReverseProxy).ServeHTTP(0xc0001221e0, {0xaa2968?, 0xc0002f2540}, 0xc0003a2d00)
+	D:/Go/src/net/http/httputil/reverseproxy.go:252 +0x302
+main.RunReverseProxyServ.func1({0xaa2968, 0xc0002f2540}, 0xc0003a2d00)
+	D:/workspaces/git/go_dynamic_reverse_proxy/reverseProxy.go:306 +0x289
+net/http.HandlerFunc.ServeHTTP(0x29081bc8?, {0xaa2968?, 0xc0002f2540?}, 0x40d7c5?)
+	D:/Go/src/net/http/server.go:2084 +0x2f
+net/http.(*ServeMux).ServeHTTP(0x0?, {0xaa2968, 0xc0002f2540}, 0xc0003a2d00)
+	D:/Go/src/net/http/server.go:2462 +0x149
+net/http.serverHandler.ServeHTTP({0xc0002f5350?}, {0xaa2968, 0xc0002f2540}, 0xc0003a2d00)
+	D:/Go/src/net/http/server.go:2916 +0x43b
+net/http.(*conn).serve(0xc0001bb0e0, {0xaa2d90, 0xc0001de2d0})
+	D:/Go/src/net/http/server.go:1966 +0x5d7
+created by net/http.(*Server).Serve
+	D:/Go/src/net/http/server.go:3071 +0x4db
