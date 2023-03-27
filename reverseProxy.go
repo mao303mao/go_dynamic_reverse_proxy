@@ -203,7 +203,10 @@ func RunReverseProxyServ() {
 		log.Panicln("[reverseConf.yml]有误, 请检查。")
 		return
 	}
-	rp, _ := NewReverseProxy("http://127.0.0.1:80")                     //此处选用一个默认80端口做一个初始化而已，无任何特殊作用
+	rp, err := NewReverseProxy("http://127.0.0.1:80") //此处选用一个默认80端口做一个初始化而已，无任何特殊作用
+	if err != nil {
+		log.Printf("xxxxxxxxxxx：%s", err)
+	}
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { // 支持正则路由版本--多协程查找route
 		var wg sync.WaitGroup
 		// 进行锁定保护
@@ -213,14 +216,12 @@ func RunReverseProxyServ() {
 			wg.Add(1)
 		}
 		wg.Wait()
-		// fmt.Printf("tRoute: %v\n", tRoute)
 		if strings.TrimSpace(tRoute.TargetUrl) != "" { // 再次检查下匹配的转发route
 			rp.Director = func(req *http.Request) {
 				target, err := url.Parse(strings.TrimSpace(tRoute.TargetUrl))
 				if err != nil {
 					log.Printf("转发的URL有误：%s", tRoute.TargetUrl)
 				}
-				// log.Printf("转发的URL：%s", tRoute.TargetUrl)
 				targetQuery := target.RawQuery
 				req.URL.Scheme = target.Scheme
 				req.URL.Host = target.Host
